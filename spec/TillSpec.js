@@ -7,12 +7,12 @@ describe('till', function() {
   });
 
   it('knows the current order, which is empty by default', function() {
-    expect(till.showCurrentOrder()).toEqual('')
+    expect(till._currentOrder).toEqual([])
   });
 
   it("can add an item to current order", function() {
     till.addItem("Cortado")
-    expect(till.showCurrentOrder()).toEqual('Cortado')
+    expect(till._currentOrder[0].name).toEqual('Cortado')
   });
 
 });

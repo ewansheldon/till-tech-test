@@ -4,13 +4,7 @@ describe('menu', function() {
 
   beforeEach(function() {
     menu = new Menu();
-    itemsJson = [
-  {
-    "shopName": "The Coffee Connection",
-    "address": "123 Lakeside Way",
-    "phone": "16503600708",
-    "prices": [
-      {
+    itemsJson = {
         "Cafe Latte": 4.75,
         "Flat White": 4.75,
         "Cappucino": 3.85,
@@ -26,13 +20,10 @@ describe('menu', function() {
         "Blueberry Muffin": 4.05,
         "Chocolate Chip Muffin": 4.05,
         "Muffin Of The Day": 4.55
-      }
-    ]
-  }
-]
+      };
   });
 
   it('has the json list of menu items', function() {
-    expect(menu._items).toEqual(itemsJson)
+    expect(menu._items).toEqual(itemsJson);
   });
 });
